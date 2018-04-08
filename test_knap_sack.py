@@ -14,6 +14,17 @@ class generate_random_item_list_test( unittest.TestCase ):
 		item_list = knap_sack.generate_random_item_list( list_length = 0, max_weight = 10, max_value = 10 )
 		self.assertEqual( 0, len( item_list ) )
 
+
+class sort_item_list_test( unittest.TestCase ):
+	"""tests for sorting the input array of items"""
+	
+	def test_sort_list_of_four_nodes( self ):
+		input_items = [ knap_sack.knap_sack_item( weight = 4, value = 5 ), knap_sack.knap_sack_item( weight = 3, value = 6 ), knap_sack.knap_sack_item( weight = 2, value = 1), knap_sack.knap_sack_item( weight = 1, value = 4) ]
+		expected_output = [ knap_sack.knap_sack_item( weight = 1, value = 4), knap_sack.knap_sack_item( weight = 2, value = 1), knap_sack.knap_sack_item( weight = 3, value = 6 ), knap_sack.knap_sack_item( weight = 4, value = 5 ) ] 
+		output_list = knap_sack.sort_item_list( input_items )
+		self.assertEqual( output_list, expected_output )
+
+
 class construct_item_weight_array_test( unittest.TestCase ):
 	"""test for the construct_item_weight_array_function"""
 
