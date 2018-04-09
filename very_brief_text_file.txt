@@ -1,0 +1,7 @@
+for this assignment, the png I uploaded shows three different running times. The blue line in the image represents the algorithm running on inputs with random sized valued and random sized weights. The red line represents a generator which creates a list of items which have increasing vaoue and decreasing weights. Finally, the green line represents a generator which uses a constant weight of 1 and increasing values. 
+
+The three all have varying runtimes as a result of the number of comparisons they preform. While the big O() value of the functions does not change, the amount of work required to arrive at a correct decision does. In the situation of the constant time algorithm, there are a larger number of comparisons needed to finish the algorithm. This is because at the onset of each iterative loop building the memoized version of the the problem, the algorithm must begin comparring at w = 1 as opposed to a higher value. 
+
+In contrast, the red line represnting an inverse relationship between weights and values in the nodes as the fastest run time. We can assume that this is the case because as the loop preforms its work, the most valuable and optimal items are placed in the knap sack at the very beginning everytime. 
+
+The randomly generated values bisect the two.
